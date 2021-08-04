@@ -22,10 +22,12 @@ public class DividePorZero {
 			}
 		catch (InputMismatchException e1) {
 			System.out.println("Numeros devem ser inteiros");
-			s.nextLine();
+			s.nextLine(); // descarta a entrada que deu erro e libera novamente para o usuario digitar
 		}
 		catch(ArithmeticException e2) {
 			System.out.println("Divisor deve ser diferente de Zero");
+		}finally {
+			System.out.println("Finally executado");
 		}
 			
 		}while(continua);
